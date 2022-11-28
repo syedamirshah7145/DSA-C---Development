@@ -389,43 +389,43 @@ void merge1(Node **even,Node **odd,Node **merge1){
 //circular end here
 
 int main(){
-    struct Node *even = new Node;
-    struct Node *odd = new Node;
-    struct Node *merge = new Node;
-    merge = nullptr;
+    // struct Node *even = new Node;
+    // struct Node *odd = new Node;
+    // struct Node *merge = new Node;
+    // merge = nullptr;
     struct Node *head = new Node;
     head = nullptr;
-    even = nullptr;
-    odd = nullptr;
+    // even = nullptr;
+    // odd = nullptr;
 
     
-    struct Node *list1 = new Node;
-    struct Node *list2 = new Node;
-    list1 = nullptr;
-    list2 = nullptr;
+    // struct Node *list1 = new Node;
+    // struct Node *list2 = new Node;
+    // list1 = nullptr;
+    // list2 = nullptr;
 
-    insertAtEnd(&even,32);
-    insertAtEnd(&even,44);
-    insertAtEnd(&even,34);
-    insertAtEnd(&even,22);
-    insertAtEnd(&even,18);
+    // insertAtEnd(&even,32);
+    // insertAtEnd(&even,44);
+    // insertAtEnd(&even,34);
+    // insertAtEnd(&even,22);
+    // insertAtEnd(&even,18);
 
-    insertAtEnd(&odd,33);
-    insertAtEnd(&odd,83);
-    insertAtEnd(&odd,13);
-    insertAtEnd(&odd,5);
+    // insertAtEnd(&odd,33);
+    // insertAtEnd(&odd,83);
+    // insertAtEnd(&odd,13);
+    // insertAtEnd(&odd,5);
 
-    append(&list1,33);
-    append(&list1,44);
-    append(&list1,56);
-    append(&list1,34);
-    append(&list1,35);
+    // append(&list1,33);
+    // append(&list1,44);
+    // append(&list1,56);
+    // append(&list1,34);
+    // append(&list1,35);
 
-    append(&list2,42);
-    append(&list2,86);
-    append(&list2,44);
-    append(&list2,33);
-    append(&list2,30);
+    // append(&list2,42);
+    // append(&list2,86);
+    // append(&list2,44);
+    // append(&list2,33);
+    // append(&list2,30);
 
 
     append(&head,33);
@@ -433,71 +433,73 @@ int main(){
     append(&head,33);
     append(&head,34);
     append(&head,33);
+    swapnthV2(&head,1,3);
+    displayList(head);
 
-    bool flag = true;
+//     bool flag = true;
     
-   do
-   {
-        menu();
-        cout <<endl;
+//    do
+//    {
+//         menu();
+//         cout <<endl;
 
-        cout << "Enter choice:"<< endl;
-        int choice;
-        cin >> choice;
-        if (choice == -1){
-            flag = false;
-        } 
+//         cout << "Enter choice:"<< endl;
+//         int choice;
+//         cin >> choice;
+//         if (choice == -1){
+//             flag = false;
+//         } 
 
-        switch (choice)
-        {
-        case 0:
-            displayList(head);
-            break;
-        case 1:
-            printReverseListUsingIteration(head);
-            cout <<endl << "\n";
-            break;
-        case 2:
-            reverseListElements(&head);
-            cout << endl << "\n";
-            break;
-        case 3:
-            removeDuplicatesV2(head);
-            cout << endl << "\n";
-            break;
-        case 4:
-            intersection(list1,list2);
-            cout << endl << "\n";
-            break;
-        case 5:
-            int n;
-            cout<<"Enter nth index from last";
-            cin>>n;
-            deleteNthNodeFromLast(&head,n);
-            cout << endl << "\n";
-            break;
-        case 6:
-            int n1;
-            cout << "Enter nth node from start: ";
-            cin>>n1;
-            int n2;
-            cout << "Enter nth node from end: ";
-            cin >> n2;
-            swapnthV2(&head,n1,n2);
-            cout <<endl<< "\n";
-        case 7:
-            cout<<"Merge two lists(even & odd) into one(swapping)"<<endl;
-            cout<<"Even:"<<endl;
-            displayCircular(even);
-            cout<<"Odd:"<<endl;
-            displayCircular(odd);
-            merge1(&even,&odd,&merge);
-            cout<<"Merge:"<<endl;
-            displayCircular(merge);
-            cout<<endl;
-            break;
-        default:
-            break;
-        }
-   } while (flag);
+//         switch (choice)
+//         {
+//         case 0:
+//             displayList(head);
+//             break;
+//         case 1:
+//             printReverseListUsingIteration(head);
+//             cout <<endl << "\n";
+//             break;
+//         case 2:
+//             reverseListElements(&head);
+//             cout << endl << "\n";
+//             break;
+//         case 3:
+//             removeDuplicatesV2(head);
+//             cout << endl << "\n";
+//             break;
+//         case 4:
+//             intersection(list1,list2);
+//             cout << endl << "\n";
+//             break;
+//         case 5:
+//             int n;
+//             cout<<"Enter nth index from last";
+//             cin>>n;
+//             deleteNthNodeFromLast(&head,n);
+//             cout << endl << "\n";
+//             break;
+//         case 6:
+//             int n1;
+//             cout << "Enter nth node from start: ";
+//             cin>>n1;
+//             int n2;
+//             cout << "Enter nth node from end: ";
+//             cin >> n2;
+//             swapnthV2(&head,n1,n2);
+//             cout <<endl<< "\n";
+//         case 7:
+//             cout<<"Merge two lists(even & odd) into one(swapping)"<<endl;
+//             cout<<"Even:"<<endl;
+//             displayCircular(even);
+//             cout<<"Odd:"<<endl;
+//             displayCircular(odd);
+//             merge1(&even,&odd,&merge);
+//             cout<<"Merge:"<<endl;
+//             displayCircular(merge);
+//             cout<<endl;
+//             break;
+//         default:
+//             break;
+//         }
+//    } while (flag);
 }

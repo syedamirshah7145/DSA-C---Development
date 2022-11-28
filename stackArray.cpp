@@ -433,9 +433,9 @@ int postfixEvaluate(string s){
 }
 
 int main(){
-    // postfixExpression("a+b*c+(d*e+f)*g");
+    postfixExpression("a+b*c+(d*e+f)*g");
     // cout<<checkMultipleTyped("");
     // postfixExpression("7+(5-3*6)+8/2+9");
-    cout<<postfixEvaluate("7536*-+82/+9+");
+    // cout<<postfixEvaluate("7536*-+82/+9+");
 }
 
