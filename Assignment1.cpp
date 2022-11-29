@@ -433,7 +433,10 @@ int main(){
     append(&head,33);
     append(&head,34);
     append(&head,33);
-    swapnthV2(&head,1,3);
+    append(&head,355);
+    append(&head,346);
+    append(&head,332);
+    swapnthV2(&head,2,2);
     displayList(head);
 
 //     bool flag = true;
