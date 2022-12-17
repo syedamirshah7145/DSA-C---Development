@@ -48,5 +48,6 @@ bool checkVertexExist(int id){
 int main(){
     insertVertex(0);
     insertVertex(2);
-    cout<<checkVertexExist(1);
+    insertVertex(0);
+    cout<<checkVertexExist(0);
 }

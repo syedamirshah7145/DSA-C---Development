@@ -33,7 +33,8 @@
     "iostream": "cpp",
     "*.tcc": "cpp",
     "string": "cpp",
-    "array": "cpp"
+    "array": "cpp",
+    "iosfwd": "cpp"
   },
   "C_Cpp.errorSquiggles": "Disabled"
 }
