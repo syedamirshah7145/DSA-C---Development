@@ -69,6 +69,42 @@ void addEdge(int vData,int eData){
     }
 }
 
+void deleteEdge(int vData,int eData){
+    node *temp = head;
+    while(temp != nullptr){
+        if(temp->data == vData){
+            break;
+        }
+        temp = temp->next;
+    }
+    if(temp == nullptr){
+        cout<<"Vertex Not Found!";
+        return;
+    }
+    else{
+        edge *etemp = temp->head;
+        if(etemp->data == eData){
+            if(temp->head == temp->tail){
+                temp->head = temp->tail = nullptr;
+                return;
+            }
+            temp->head = temp->head->next;
+            return;
+        }
+        etemp = etemp->next;
+        while(etemp != nullptr){
+            if(etemp->data == eData){
+                etemp = etemp->next;
+                return;
+            }
+            etemp = etemp->next;
+        }
+        if(etemp == nullptr){
+            cout<<"Edge Not Found!"<<endl;
+        }
+    }
+}
+
 void display(){
     node *temp = head;
     edge *etemp;
@@ -91,5 +127,9 @@ int main(){
     addEdge(1,0);
     addEdge(0,1);
     addEdge(1,2);
+    deleteEdge(1,0);
+    deleteEdge(0,1);
+    deleteEdge(1,2);
+    deleteEdge(5,6);
     display();
 }
