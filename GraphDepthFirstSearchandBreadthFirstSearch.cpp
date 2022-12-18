@@ -103,6 +103,17 @@ void depthFirstSearch()
     }
 }
 
+//depth first search using recursion
+// void depthFirstSearchUsingRecursion(){
+//     int adj = getAdjacentUnvisitedNodes();
+//     if(adj == -1){
+//         pop();
+//         return;
+//     }
+//     displayVertex(adj);
+//     depthFirstSearchUsingRecursion();
+// }
+
 // Queue Functions to implement Breath First Search
 
 int queue[SIZE];
