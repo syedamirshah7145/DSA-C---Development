@@ -5,6 +5,7 @@ using namespace std;
 struct edge{
     int data;
     edge *next;
+    int weight;
 };
 
 struct node{
@@ -46,7 +47,7 @@ bool checkVName(int data){
     return true;
 }
 
-void addEdge(int vData,int eData){
+void addEdge(int vData,int eData,int weight){
     node *temp = head;
     while(temp->data != vData && temp != nullptr){
         temp = temp->next;
@@ -58,6 +59,7 @@ void addEdge(int vData,int eData){
     if(temp != nullptr && checkVName(eData)){
         edge *etemp = new edge;
         etemp->data = eData;
+        etemp->weight = weight;
         etemp->next = nullptr;
         if(temp->head == nullptr){
             temp->head = temp->tail = etemp;
@@ -112,7 +114,7 @@ void display(){
         cout<<temp->data<<" : ";
         etemp = temp->head;
         while(etemp != nullptr){
-            cout<<etemp->data<<" , ";
+            cout<<"("<<etemp->data<<" , "<<etemp->weight<<")";
             etemp = etemp->next;
         }
         cout<<endl;
@@ -124,12 +126,8 @@ int main(){
     insertVertex(1);
     insertVertex(2);
     insertVertex(0);
-    addEdge(1,0);
-    addEdge(0,1);
-    addEdge(1,2);
-    deleteEdge(1,0);
-    deleteEdge(0,1);
-    deleteEdge(1,2);
-    deleteEdge(5,6);
+    addEdge(1,0,7);
+    addEdge(0,2,8);
+    addEdge(1,2,9);
     display();
 }
