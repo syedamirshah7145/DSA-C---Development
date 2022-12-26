@@ -53,12 +53,7 @@ void Dijkstra(int graph[9][9])
         cout<<distances[j];
         cout<<endl;
     }
-    
-    
-
-
 }
-
 
 
 int main()
