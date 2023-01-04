@@ -3,7 +3,7 @@
 using namespace std;
 
 
-//using ietrative approach
+//using iterative approach
 int linearSearch(int arr[4],int key,int size){
     for (int i = 0; i < size; i++)
     {

@@ -85,7 +85,7 @@ void enqueue(int x)
 void display()
 {
     int p = 0;
-    while (p != size + 1)
+    while (p != size+1)
     {
         cout << h[p] << endl;
         p++;

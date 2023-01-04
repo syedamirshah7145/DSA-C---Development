@@ -269,14 +269,14 @@ int main()
     obj.root = obj.insertion(obj.root, newNode3);
     obj.root = obj.insertion(obj.root, newNode4);
     obj.root = obj.insertion(obj.root, newNode5);
-    obj.root = obj.deleteNode(obj.root,167);
-    obj.root = obj.deleteNode(obj.root,15);
-    obj.root = obj.deleteNode(obj.root,163);
-    obj.root = obj.deleteNode(obj.root,123);
-    obj.root = obj.deleteNode(obj.root,13);
-    obj.root = obj.deleteNode(obj.root,12);
-    obj.root = obj.deleteNode(obj.root,167);
-    obj.root = obj.deleteNode(obj.root,167);
+    // obj.root = obj.deleteNode(obj.root,167);
+    // obj.root = obj.deleteNode(obj.root,15);
+    // obj.root = obj.deleteNode(obj.root,163);
+    // obj.root = obj.deleteNode(obj.root,123);
+    // obj.root = obj.deleteNode(obj.root,13);
+    // obj.root = obj.deleteNode(obj.root,12);
+    // obj.root = obj.deleteNode(obj.root,167);
+    // obj.root = obj.deleteNode(obj.root,167);
     // obj.print2D(obj.root,4);
     obj.print2D(obj.root, 5);
 }

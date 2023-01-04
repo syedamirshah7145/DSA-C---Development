@@ -81,6 +81,10 @@ public:
 int main()
 {
     LinkedList *l = new LinkedList(12);
+    l->append(13);
+    l->append(1123);
+    l->append(1233);
+    l->append(3);
     l->bubbleSort();
     l->display();
 }

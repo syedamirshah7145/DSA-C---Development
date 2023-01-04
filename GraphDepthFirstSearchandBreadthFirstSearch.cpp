@@ -205,8 +205,12 @@ int main()
     addVertex('A');
     addVertex('F');
     addVertex('H');
+    addVertex('T');
+    addVertex('Y');
     addEdge(0, 1);
     addEdge(0,2);
+    addEdge(0,3);
+    addEdge(0,4);
     depthFirstSearch();
     cout<<endl;
     breadthFirstSearch();

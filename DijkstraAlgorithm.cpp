@@ -50,6 +50,7 @@ void Dijkstra(int graph[9][9])
     cout<<"Distance from Source:"<<endl;
     for (int j = 0; j < 9; j++)
     {
+        cout<<"to "<<j<<":";
         cout<<distances[j];
         cout<<endl;
     }

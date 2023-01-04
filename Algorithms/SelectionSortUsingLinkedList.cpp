@@ -59,6 +59,7 @@ public:
         while(p1 != nullptr){
             p2 = p1;
             min = p2;
+            p2 = p2->next;
             while(p2 != nullptr){
                 if(min->data > p2->data){
                     min = p2;
