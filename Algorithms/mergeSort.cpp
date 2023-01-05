@@ -2,6 +2,8 @@
 
 using namespace std;
 
+
+
 void merge(int arr[],int left,int mid,int right){
     int i = left;
     int j = mid+1;
@@ -31,7 +33,7 @@ void merge(int arr[],int left,int mid,int right){
         j++;
         k++;
     }
-    for (int n = left; n <= right; i++){
+    for (int n = left; n <= right; n++){
         arr[n] = temp[n];
     }
 }
@@ -46,9 +48,9 @@ void mergeSort(int arr[],int left,int right){
 }
 
 int main(){
-    int a[] = {6,4,5,2,3,1};
-    mergeSort(a,0,5);
-    for (int i = 0; i < 6; i++)
+    int a[8] = {6,4,5,2,4,6,8,7};
+    mergeSort(a,0,4);
+    for (int i = 0; i < 8; i++)
     {
         cout<<a[i]<<endl;
     }
