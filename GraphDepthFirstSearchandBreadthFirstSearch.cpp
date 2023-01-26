@@ -164,26 +164,36 @@ void breadthFirstSearch()
 {
     listVertices[0]->visited = true;
     enqueue(0);
-    // displayVertex(0);
-    // cout<<" : ";
+    displayVertex(0);
     while (!isQueueEmpty())
     {
-        int topelement1 = topElementQueue();
-        for (int i = 0; i < vertexCount; i++)
+        int unvisitedNode = getAdjacentUnvisitedNodes(topElementQueue());
+        if (unvisitedNode == -1)
         {
-            int adj = getAdjacentUnvisitedNodes(topelement1);
-            if (adj == -1)
-            {
-                displayVertex(topElementQueue());
-                dequeue();
-                break;
-            }
-            else
-            {
-                enqueue(adj);
-                listVertices[adj]->visited = true;
-            }
+            dequeue();
         }
+        else
+        {
+            listVertices[unvisitedNode]->visited = true;
+            displayVertex(unvisitedNode);
+            enqueue(unvisitedNode);
+        }
+        // int topelement1 = topElementQueue();
+        // for (int i = 0; i < vertexCount; i++)
+        // {
+        //     int adj = getAdjacentUnvisitedNodes(topelement1);
+        //     if (adj == -1)
+        //     {
+        //         displayVertex(topElementQueue());
+        //         dequeue();
+        //         break;
+        //     }
+        //     else
+        //     {
+        //         enqueue(adj);
+        //         listVertices[adj]->visited = true;
+        //     }
+        // }
     }
     for (int i = 0; i < vertexCount; i++)
     {
@@ -211,7 +221,7 @@ int main()
     addEdge(0,2);
     addEdge(0,3);
     addEdge(0,4);
-    depthFirstSearch();
+    // depthFirstSearch();
     cout<<endl;
     breadthFirstSearch();
 }
